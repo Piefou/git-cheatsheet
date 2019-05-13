@@ -23,3 +23,14 @@ Add this file to versioning, use '.' for all current files
 `git commit -m [commit message]`
 Commit the changes to the local repo
 
+`git diff`
+Git Status on per-line changes for untracked files, '--staged' flag for staged files
+
+`git rm [file.ext]`
+I want to delete a file, remove it of versioning and from working dir, '--cached' flag for no physical deletion
+
+`git mv [file.ext]`
+File has been moved/renamed, do it in Git
+
+
+
