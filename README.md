@@ -12,6 +12,7 @@ Once on a new PC :
 git config --global user.name "Piefou"
 git config --global user.email "myemail@email.com"
 git config --global color.ui auto
+git config --global credential.helper cache --timeout 1800
 ```
 
 ### Then :
@@ -50,8 +51,17 @@ Don't wanna commit this file, remove from stage
 `git checkout -- [file.ext]`
 Did crap, remove all the changes back to the local repo state
 
+`git reset --hard [file.ext]`
+Same
+
+`git revert [commit]`
+Undo the changes made by a commit
+
 `git stash`
 Put aside my changes. 'stash list' cmd to see what is stashed. 'stash pop' to bring back the changes
+
+`git fsck --lost-found`
+Are they any orphan commits ?
 
 ### Remotes :
 
@@ -102,7 +112,7 @@ Create a new branch on the current commit. '-d' for deletion
 Switch to another branch, '-b' to create if non-existent. If a remote branch exists with this name, it will follow its changes
 
 `git merge [branch]`
-Merge the branch to your current workdir
+Merge the branch to your current workdir. 'merge --abort' for #nop the merge
 
 `git push [remote] --delete [branch]`
 Delete the remote branch
@@ -119,3 +129,7 @@ To create an alias of a command
 Show whitespaces differences
 
 `git log --graph --oneline --decorate --all`
+Cool log
+
+`git cheery-pick [commit]`
+Apply this particular commit
