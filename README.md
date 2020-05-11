@@ -15,7 +15,7 @@ git config --global user.name "Piefou"
 git config --global user.email "myemail@email.com"
 git config --global color.ui auto
 git config --global credential.helper cache --timeout 900 (keep in memory 15 min)
-ou
+OR
 git config --global credential.helper store (keep in clear at ~/.git-credentials)
 ```
 
@@ -36,7 +36,7 @@ Git Status on per-line changes for untracked files, '--staged' flag for staged f
 `git rm [file.ext]`
 I want to delete a file, remove it of versioning and from working dir, '--cached' flag for no physical deletion
 
-`git mv [file.ext]`
+`git mv [file.ext] [new-file.ext]`
 File has been moved/renamed, do it in Git
 
 ### History :
@@ -56,7 +56,7 @@ Don't wanna commit this file, remove from stage
 Did crap, remove all the changes back to the local repo state
 
 `git stash`
-Put aside my changes. 'stash list' cmd to see what is stashed. 'stash pop' to bring back the changes
+Put aside my changes. 'stash list' cmd to see what is stashed. 'stash pop' to bring back the changes. 'stash clear' to delete all stashed changes.
 
 ### Remotes :
 
