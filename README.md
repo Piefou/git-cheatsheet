@@ -14,6 +14,9 @@ Once on a new PC :
 git config --global user.name "Piefou"
 git config --global user.email "myemail@email.com"
 git config --global color.ui auto
+git config --global credential.helper cache --timeout 900 (keep in memory 15 min)
+ou
+git config --global credential.helper store (keep in clear at ~/.git-credentials)
 ```
 
 ### Then :
