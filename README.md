@@ -14,6 +14,7 @@ Once on a new PC :
 git config --global user.name "Piefou"
 git config --global user.email "myemail@email.com"
 git config --global color.ui auto
+git config --global core.editor "editor_name"
 git config --global credential.helper 'cache --timeout 900' (keep in memory 15 min)
 OR
 git config --global credential.helper store (keep in clear at ~/.git-credentials)
@@ -39,6 +40,12 @@ I want to delete a file, remove it of versioning and from working dir, '--cached
 `git mv [file.ext] [new-file.ext]`
 File has been moved/renamed, do it in Git
 
+`git show [commit]`
+Show the details of the given reference
+
+`git cherry-pick [commit]`
+Apply the changes of a specified commit to the current branche
+
 ### History :
 
 `git log`
@@ -54,6 +61,9 @@ Don't wanna commit this file, remove from stage
 
 `git checkout -- [file.ext]`
 Did crap, remove all the changes back to the local repo state
+
+`git revert [commit]`
+Bad commit, create a new one which revert the changes
 
 `git stash`
 Put aside my changes. 'stash list' cmd to see what is stashed. 'stash pop' to bring back the changes. 'stash clear' to delete all stashed changes.
@@ -101,7 +111,7 @@ To create a branch from a tag
 ### Branches :
 
 `git branch [branch]`
-Create a new branch on the current commit. '-d' for deletion
+Create a new branch on the current commit. '-d' for deletion, '-a' to show local and remotes branches
 
 `git checkout [branch]`
 Switch to another branch, '-b' to create if non-existent. If a remote branch exists with this name, it will follow its changes
