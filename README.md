@@ -51,6 +51,9 @@ Apply the changes of a specified commit to the current branche
 `git log`
 Show me the history
 
+`git diff --name-status [commit1] [commit2]`
+Show the files changed between these two commits, with there status (added, modified, removed) and paths
+
 ### Whoops :
 
 `git commit --amend`
@@ -117,7 +120,10 @@ Create a new branch on the current commit. '-d' for deletion, '-a' to show local
 Switch to another branch, '-b' to create if non-existent. If a remote branch exists with this name, it will follow its changes
 
 `git merge [branch]`
-Merge the branch to your current workdir
+Merge the branch to your current workdir, and commit the result
+
+`git merge --squash [squash]`
+Merge the branch to your current workdir, and set the changes in a unstaged state (you have to commit yourself the result)
 
 `git push [remote] --delete [branch]`
 Delete the remote branch
