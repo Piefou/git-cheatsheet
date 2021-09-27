@@ -131,6 +131,9 @@ Delete the remote branch
 `git rebase [branch]`
 Switch your current branch to the specified branch, then apply the changes you made
 
+`git fetch -p`
+Remove all local branches that does not exists on the remote
+
 ### Misc :
 
 `git config --global alias.[aliascmd] '[cmd]'`
