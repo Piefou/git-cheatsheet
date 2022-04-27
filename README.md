@@ -68,6 +68,9 @@ Did crap, remove all the changes back to the local repo state
 `git revert [commit]`
 Bad commit, create a new one which revert the changes
 
+`git reset --hard [remote/branch]`
+Local branch is garbage, reset to remote
+
 `git stash`
 Put aside my changes. 'stash list' cmd to see what is stashed. 'stash pop' to bring back the changes. 'stash clear' to delete all stashed changes.
 
